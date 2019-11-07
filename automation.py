@@ -17,6 +17,7 @@ spi.max_speed_hz=speed
 results0 = pd.DataFrame()
 results1 = pd.DataFrame()
 loads = np.arange(0,20+2,2)
+t = np.arange(0.0, 11.0, 1)
 
 GPIO.setmode(GPIO.BCM)
 GPIO.setwarnings(False)
@@ -61,11 +62,11 @@ for load in loads:
     volt5_data = ReadChannel(volt5_channel)
     vin = ConvertVolts5(volt5_data,3)
  
-    #print("--------------------------------------------")
-    print("Vout: {} ({}V)".format(volt3_data,vout))
-    print("Vin : {} ({}V)".format(volt5_data,vin))
+    #print("Vout: {} ({}V)".format(volt3_data,vout))
+    #print("Vin : {} ({}V)".format(volt5_data,vin))
+    #print("Vload : {} ({}V)".format(vload_data,vload))
 
-    time.sleep(5)
+    time.sleep(0.1)
     
     #Preenchimento dos dados na tabela
     temp0= {}
@@ -98,8 +99,7 @@ for load in loads:
     #GPIO.output(13, GPIO.HIGH)
     #time.sleep(1)
     #GPIO.output(13, GPIO.LOW)
-    
-    
+
 
 results0.to_csv('Results0.csv')
 #results1.to_csv('Results1.csv')
@@ -107,7 +107,19 @@ results0.to_csv('Results0.csv')
 loadline0 = linregress(results0['Iout'], results0['Vout'])
 
 
-plt.plot(results0['Iout'], results0['Vout'], 'ro')
+plt.figure()
+plt.subplot(211)
+plt.plot(t, results0['Vout'], 'ro')
+plt.title('Tensão de saída 3.3V')
+
+plt.subplot(212)
+plt.plot(t, results0['Vusb'], 'ro')
+plt.title('Tensão de entrada 5V')
+
+
+#plt.subplot(213)
+#plt.plot(t, results0['Vload'], 'ro')
+#plt.title('Tensão de saída 3.3V com carga')
 plt.show()
 
     
