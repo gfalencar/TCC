@@ -1,0 +1,9 @@
+,GPIO D10,GPIO D11,GPIO D12,GPIO D13,GPIO D5,GPIO D6,GPIO D9
+0,D10 Ligou,D11 não Ligou,D12 não Ligou,D13 não Ligou,D5 não Ligou,D6 não Ligou,D9 não Ligou
+1,D10 não Ligou,D11 Ligou,D12 não Ligou,D13 não Ligou,D5 não Ligou,D6 não Ligou,D9 não Ligou
+2,D10 não Ligou,D11 não Ligou,D12  Ligou,D13 não Ligou,D5 não Ligou,D6 não Ligou,D9 não Ligou
+3,D10 não Ligou,D11 não Ligou,D12 não Ligou,D13 Ligou,D5 não Ligou,D6 não Ligou,D9 não Ligou
+4,D10 não Ligou,D11 não Ligou,D12 não Ligou,D13 não Ligou,D5 Ligou,D6 não Ligou,D9 não Ligou
+5,D10 não Ligou,D11 não Ligou,D12 não Ligou,D13 não Ligou,D5 não Ligou,D6 Ligou,D9 não Ligou
+6,D10 não Ligou,D11 não Ligou,D12 não Ligou,D13 não Ligou,D5 não Ligou,D6 não Ligou,D9 Ligou
+7,D10 não Ligou,D11 não Ligou,D12 não Ligou,D13 não Ligou,D5 não Ligou,D6 não Ligou,D9 não Ligou
